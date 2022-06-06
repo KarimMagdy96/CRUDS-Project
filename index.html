@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee/all.min.css">
+    <link rel="stylesheet" href="stylee/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="stylee/stylee.css">
+    <title>super Crude System</title>
+</head>
+
+<body class="text-white text-center">
+    <div class="container">
+        <h1 class="text-uppercase">cruds</h1>
+        <p class=" text-uppercase">creat read update delete search</p>
+        <input class=" form-control mb-3" oninput="validatProdact(this.id)" placeholder="Title" id="title" type="text">
+        <div class="btn w-100 mb-3 d-none btn-secondary text-start text-capitalize text-warning" id="invalidMsg">you need to enter valid data like 'samsung', 'Nokia' + prodact number like 's10' </div>
+        <div class="row g-1">
+            <input type="number" onkeyup="prodactTotal()" id="price" placeholder="Price"
+                class=" form-control col me-1 d-inline">
+            <input type="number" id="tax" onkeyup="prodactTotal()" placeholder="Tax"
+                class="  form-control col me-1 d-inline">
+            <input type="number" id="ads" onkeyup="prodactTotal()" placeholder="Ads"
+                class=" form-control col me-1 d-inline">
+            <input type="number" id="discount" onkeyup="prodactTotal()" placeholder="Discount"
+                class=" form-control col me-1  d-inline">
+            <small id="total" onkeyup="prodactTotal()"
+                class="col rounded-1 d-flex justify-content-center align-items-center"></small>
+        </div>
+        <input class=" form-control mt-3 " id="count" placeholder="Count" type="number">
+        <input class=" form-control mt-3" id="category"oninput="validatProdact(this.id)" placeholder="Category" type="text">
+        <div class="btn w-100 d-none btn-secondary text-start text-capitalize text-warning" id="invalidMsgForCat">you need to enter valid category like 'tv', 'phone'..etc</div>
+        <button class="btn bg-warning w-100 text-capitalize mt-3 border-5" onclick="submitData()" id="submit">creat</button>
+        <input class=" form-control mt-3" onkeyup="SearchProdacts(this.value)" id="search" placeholder="Search" type="search">
+        <button onclick="perpUpdate(this.id)" class="btn text-white btn-outline-warning  w-25 me-5 text-capitalize mt-3 border-5"
+            id="searchTittle">Search By Title</button>
+        <button onclick="perpUpdate(this.id)" class="btn text-white w-25 btn-outline-warning text-capitalize mt-3 border-5" id="searchCategory">Search
+            By Category</button>
+            <div id="deletBtn">
+
+            </div>
+       
+        <table class="table text-white mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITTLE</th>
+                    <th>PRICE</th>
+                    <th>TAXES</th>
+                    <th>ADS</th>
+                    <th>DISCOUNT</th>
+                    <th>TOTAL</th>
+                    <th>CATEGORY</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+           
+            </tbody>
+        </table>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

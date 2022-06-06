@@ -1,0 +1,11 @@
+body{
+    background-image: url('../img/solid.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#total{
+    background-color: gray;
+}
+#total::before{
+    content: 'Total :';
+}
